@@ -15,6 +15,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -156,7 +157,51 @@
           </div>
         </div>
 
+        <!-- ── PROJECT CARD ──  -->
+        <div class="project-card">
+          <h3>Whispers From The Spiral</h3>
+          <p>
+            This game is a project that was made and developed during my final
+            year of my bachelor's degree in game development. It is a horror,
+            puzzle game where the player plays as a character who is trapped in
+            a mysterious house, and must solve puzzles and uncover the secrets
+            of the house in order to escape. The game is built in Unity. It is
+            currently not being developed further, but there are plans to
+            eventually continue development and turn it into a more complete
+            game. The game was made as a final project for the course "Game
+            driven product development" at Malmö University.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">C#</span>
+            <span class="project-tag">Unity</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/VickyYaoMing/WhispersFromTheSpiral"
+              class="project-link"
+              target="_blank"
+              >github ↗</a
+            >
+          </div>
+        </div>
+
         <!-- ── ADD YOUR NEXT PROJECT ABOVE THIS LINE ── -->
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+       CV
+  ───────────────────────────────────────── -->
+    <section id="cv">
+      <p class="section-label">CV</p>
+      <button class="btn" id="cv-toggle" onclick="toggleCV()">Show CV</button>
+      <div id="cv-embed-wrap" class="cv-embed-wrap">
+        <iframe
+          id="cv-embed"
+          src="CVGustafDahlqvist.pdf"
+          class="cv-embed"
+          title="Gustaf Dahlqvist CV"
+        ></iframe>
       </div>
     </section>
 
@@ -188,6 +233,13 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      function toggleCV() {
+        const wrap = document.getElementById("cv-embed-wrap");
+        const btn = document.getElementById("cv-toggle");
+        const open = wrap.classList.toggle("open");
+        btn.textContent = open ? "Hide CV" : "Show CV";
+      }
     </script>
   </body>
 </html>
